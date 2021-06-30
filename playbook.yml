@@ -19,4 +19,4 @@
     loop:
     - '{"extra_vars":"---\n","inventory_id":2,"credentials":[2]}'
     - '{"extra_vars":"---\n","inventory_id":3,"credentials":[3]}'
-    - '{"extra_vars":"---\n","inventory_id":4,"credentials":[4]}'
+    - '{"extra_vars":"---\n","inventory_id":4,"credentials":[5]}'
