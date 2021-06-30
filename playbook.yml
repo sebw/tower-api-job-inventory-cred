@@ -2,7 +2,21 @@
 - name: interact with tower api and start job with specific inventory and credentials
   hosts: localhost
   gather_facts: false
+
   tasks:
   - name: api call
     uri:
-      url: https://student1.ecd2.example.opentlc.com/
+      url: https://student1.ecd2.example.opentlc.com/api/v2/job_templates/14/launch/
+      method: POST
+      force_basic_auth: yes
+      user: admin
+      password: xFHdh7qf7ifHc8
+      status_code: 201
+      headers:
+        Content-Type: "application/json"
+      body: "{{ item | string }}"
+      validate_certs: False
+    loop:
+    - '{"extra_vars":"---\n","inventory_id":2,"credentials":[2]}'
+    - '{"extra_vars":"---\n","inventory_id":3,"credentials":[3]}'
+    - '{"extra_vars":"---\n","inventory_id":4,"credentials":[4]}'
