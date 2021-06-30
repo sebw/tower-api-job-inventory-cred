@@ -1,0 +1,7 @@
+---
+- name: actual job supposedly running against 45 inventories
+  hosts: all
+  gather_facts: false
+  tasks:
+  - debug:
+      msg: hello

@@ -1,0 +1,8 @@
+---
+- name: interact with tower api and start job with specific inventory and credentials
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: api call
+    uri:
+      url: https://student1.ecd2.example.opentlc.com/
